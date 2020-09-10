@@ -1,0 +1,24 @@
+/*********************************************
+Ohjelma kysyy positiivista kokonaislukua yhä
+uudelleen ja uudelleen kunnes saa mitä pyytää
+Susanne Kojlonen
+*********************************************/
+
+#include <iostream>
+
+int main() {
+
+  int guess;
+
+  std::cout << "Give a positive whole number: ";
+  std::cin >> guess;
+  
+  while (guess < 0) {
+    std::cout << "Not that one.\n";
+    std::cin >> guess;
+  }
+  if (guess > 0) {
+    std::cout << "Good job!";
+  }
+
+}
