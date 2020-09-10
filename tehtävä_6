@@ -1,0 +1,40 @@
+
+
+    /******************************************************
+    * Ohjelma tulostaa tekstin BINGO, mikäli ensimmäinen *
+    * luku on jaollinen jälkimmäisellä luvulla. *
+    * Muussa tapauksessa ohjelma tulostaa tekstin BONGO. *
+    * Susanne Koljonen *
+    ******************************************************/
+     
+    #include <iostream>
+     
+    using namespace std;
+     
+    int main()
+    {
+      //variables
+     
+      int no1 = 10;
+      int no2 = 2;
+     
+      //program asks for two integers
+     
+      cout << "Enter a whole number: " << endl;
+      cin >> no1;
+      cout << "Enter a second whole numer: " << endl;
+      cin >> no2;
+     
+      int div = no1 % no2;
+     
+      //program determines if no1 is devidable by no2
+     
+      if ( div < 1 ) {
+      cout << "BINGO!" << endl;
+      } else {
+      cout << "BONGO" << endl;
+      }
+     
+      return 0;
+    }
+
