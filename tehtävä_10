@@ -1,6 +1,8 @@
 /*********************************************
 Ohjelma kysyy positiivista kokonaislukua yhä
 uudelleen ja uudelleen kunnes saa mitä pyytää
+ja sen jälkeen tulostaa luvut 0:sta annettuun
+lukuun asti.
 Susanne Kojlonen
 *********************************************/
 
@@ -9,16 +11,19 @@ Susanne Kojlonen
 int main() {
 
   int guess;
+  int no = 0;
 
-  std::cout << "Give a positive whole number: ";
+  std::cout << "Give a positive whole number: \n";
   std::cin >> guess;
   
   while (guess < 0) {
-    std::cout << "Not that one.\n";
     std::cin >> guess;
   }
-  if (guess > 0) {
+  if (guess >= 0) {
+    while (no <= guess){
+      std::cout << no << std::endl;
+      no++;
+    }
     std::cout << "Good job!";
-  }
-
+  } 
 }
