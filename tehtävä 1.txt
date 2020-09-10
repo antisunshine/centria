@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() 
+{
+  int age = 30;
+
+  cout << "Susanne " << age << endl;
+  cout << "Toikantie";
+
+  return 0;
+}

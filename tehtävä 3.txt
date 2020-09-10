@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() 
+{
+  // tehtävä 3a
+  int num1 = 30;
+  int num2 = 10;
+
+  cout << "First number is: " << num1 << endl;
+  cout << "Second number is: " << num2 << endl;
+  cout << "Numbers added are: " << num1 + num2 << endl;
+  cout << "Numbers subtracted are: " << num1 - num2 << endl;
+
+  //tehtävä 3b
+  double num3 = 2.5;
+  double num4 = 7.12;
+
+  cout << "Please give a number: " << endl;
+  cin >> num3;
+  cout << "And another: " << endl;
+  cin >> num4;
+  cout << "Your numbers multiplied are: " << num3 * num4 << endl;
+  cout << "Your numbers devided are: " << num3 / num4 << endl;
+
+  return 0;
+}

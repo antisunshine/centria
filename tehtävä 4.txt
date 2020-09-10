@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  double pie = 3.14;
+  int radius;
+  
+  cout << "Please enter a radius for the circle: ";
+  cin >> radius;
+  cout << "The area of your cicle is: " << pie * radius * radius;
+  
+  return 0;
+}
