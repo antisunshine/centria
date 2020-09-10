@@ -1,0 +1,47 @@
+
+
+    /******************************************************
+    * Ohjelma polttoainekuitin tulostamisesta. Ohjelma *
+    * kysyy, mitä tankattiin, paljonko ja tulostaa kuitin *
+    * Susanne Koljonen *
+    ******************************************************/
+     
+    #include <iostream>
+     
+    using namespace std;
+     
+    int main()
+    {
+      //variables
+     
+      double volume = 20.5;
+      double diesel = 1.22;
+      double gasoline = 1.49;
+      string fuelType = "unknown";
+      double diePrice = diesel * volume;
+      double gasPrice = gasoline * volume;
+     
+      //program displays pricing and fuel prices for user
+     
+      cout << "WELCOME\n\n1. GASOLINE " << gasoline << "\n2. Diesel " << diesel << endl;
+     
+      //program asks for type of fuel and amount in liters
+     
+      cout << "\nEnter fuel type (GASOLINE/DIESEL): " << endl;
+      cin >> fuelType;
+      cout << "Enter amount in liters: " << endl;
+      cin >> volume;
+     
+      //program determines prices and amount for reciept and informs the user if fuel type is not spelled correctly
+     
+      if ( fuelType == "GASOLINE" ) {
+      cout << "RECIEPT:\n\n" << "Gasoline " << gasoline << " euros/liter\nPurchase " << volume << " liters\nAmout due: " << gasPrice << endl;
+      } else if ( fuelType == "DIESEL" ) {
+      cout << "RECIEPT:\n" << "Diesel " << diesel << " euros/liter\nPurchase " << volume << " liters\nAmout due: " << diePrice << endl;
+      } else {
+      cout << "Could not determine fuel type.";
+      }
+     
+      return 0;
+    }
+
