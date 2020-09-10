@@ -1,0 +1,33 @@
+/**********************************************************
+* Ohjelma kysyy postinumeron ja kertoo sen mukaan minne   *
+* lähetys on menossa.                                     *
+* Susanne Koljonen                                        *
+**********************************************************/
+
+#include <iostream>
+
+int main() {
+  
+  int postCode;
+
+  std::cout << "Enter postal code: ";
+  std::cin >> postCode;
+  
+  switch (postCode) {
+    case 67100:
+      std::cout << "Kokkola\n";
+    break;
+    case 68600:
+      std::cout << "Pietarsaari\n";
+    break;
+    case 84100:
+      std::cout << "Ylivieska\n";
+    break;
+    case 90100:
+      std::cout << "Oulu\n";
+    break;
+    default:
+    std::cout << "Sourting center Helsinki\n";
+  }
+  std::cout << "Send your holiday greetings on time!";
+}
