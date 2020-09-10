@@ -1,0 +1,31 @@
+/**********************************************************
+* Ohjelma kysyy käyttäjän iän ja antaa ohjeita sen mukaan.*
+* Susanne Koljonen                                        *
+**********************************************************/
+
+#include <iostream>
+
+int main() {
+  
+  int age;
+
+  std::cout << "Enter age: \n";
+  std::cin >> age;  
+  
+  switch (age) {
+    case 6:
+      std::cout << "Go to preschool!\n";
+    break;
+    case 7:
+      std::cout << "Go to school!\n";
+    break;
+    case 16:
+      std::cout << "Get a job!\n";
+    break;
+    case 18:
+      std::cout << "Get your driving licence!\n";
+    break;
+    default:
+    std::cout << "You do you.";
+  }
+}
