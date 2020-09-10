@@ -1,0 +1,32 @@
+/******************************************************
+* Ohjelma joka kysyy käyttäjältä ulkoilman lämpötilan.*
+* Jos ulkona on kylmempää kuin -5 astetta, auto *
+* kehotetaan laittamaan lämmitykseen. *
+* Susanne Koljonen *
+******************************************************/
+ 
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+  //variables
+ 
+  double outTemp;
+ 
+  //program asks for temperature input
+ 
+  cout << "Enter outdoor temperature (C) :" << endl;
+  cin >> outTemp;
+ 
+  //program determins if it is cold enough to plug in your car
+ 
+  if (outTemp < -5) {
+    cout << "Plug in the car!" << endl;
+    } else {
+    cout << "Still warm enough!" << endl;
+    }
+ 
+  return 0;
+} 
