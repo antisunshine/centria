@@ -1,0 +1,23 @@
+/***************************************
+* Ohjelma pyytää luvun ja
+* esittää tämän luvun kertotaulun
+* ************************************/
+ 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int num;
+    int num2 = 1;
+    
+    cout << "Give a number" << endl;
+    cin >> num;
+    
+    for (char i = 0 ; i < 10 ; i++){
+            cout << num2 << " * " << num << " = " << num2 * num << endl;
+            num2++;
+        }
+}
