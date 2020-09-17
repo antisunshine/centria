@@ -1,0 +1,30 @@
+/***************************************
+ * Ohjelma pyytää koodia. Jos 
+ * koodi on väärä 3 kertaa se lukittuu.
+ * ohjelma aukeaa kun saa oikean koodin.
+ * ************************************/
+ 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int code;
+    int tries = 1;
+    
+    cout << "ENTER CODE:" << endl;
+    cin >> code;
+    
+    while (code != 2030 && tries < 3) {
+        cout << "WRONG CODE!" << endl;
+        tries++;
+        cin >> code;
+    }
+    if (tries >=3) {
+        cout << "ACCESS DENIED" << endl;
+    } else {
+        cout << "ACCESS GRANTED" << endl;
+    }
+}
