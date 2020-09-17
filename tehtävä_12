@@ -1,0 +1,32 @@
+/***************************************
+* a. Ohjelma kysyy käyttäjältä 10 lukua 
+*    ja tulostaa niiden summan.
+* b. ohjelma kelpuuttaa vain positiiviset
+*    luvut ja virheellisestä luvusta
+*    ohjelma pyytää uuden luvun
+ * ************************************/
+ 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int num;
+    int sum = 0;
+    
+    for (char i = 0 ; i < 5 ; i++){
+        if (num < 0) {
+            cout << "NOT THAT ONE!" << endl;
+            i--;
+        } else {
+            sum = sum + num;
+        }
+     cout << "GIEV NUMBER!" << endl;
+     cin >> num;
+    }
+    sum = sum + num;
+    cout << "ALL UR NUMBERS BE " << sum << endl;
+    
+}
