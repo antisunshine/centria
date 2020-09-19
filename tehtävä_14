@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double money;
+    string answer;
+    int ticketAmount = 0;
+
+    cout << "U GOT HOW MANY MONEY?!" << endl;
+    cin >> money;
+    cout << "U GOT " << money << " moneys. Wanna buy a ticket? (5.50 MONEYS) Y/N?" << endl;
+    cin >> answer;
+    if (answer == "Y") {
+        for (int i = 0; i < 10 ; i++) {
+            money -= 5.50;
+            ticketAmount++;
+            if (money < 5.50){
+                i = 11;
+            }
+            cout << "You have " << ticketAmount << " tickets. U wanna buy more? Y/N" << endl;
+            cin >> answer;
+            if (answer == "N") {
+                i = 11;
+            }
+        }
+    }
+    cout << "You gots " << ticketAmount << " tickets and " << money << " moneys BYE!" << endl;
+
+return 0;
+}
