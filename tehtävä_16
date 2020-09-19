@@ -1,0 +1,27 @@
+/**************************************************************
+* Ohjelma arpoo luvun 0-9 ja pyytää käyttäjää arvaamaan luvun *
+* Susanne Koljonen                                            *
+**************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x = rand()%10, guess;
+
+    cout << "I am thinking of a number between 0 and 9. Guess." << endl;
+    cin >> guess;
+    while (x != guess) {
+    if (guess < x) {
+        cout << "Too low." << endl;
+        cin >> guess;
+    } else if (guess > x) {
+        cout << "Too high" << endl;
+        cin >> guess;
+    }
+    }
+    cout << "You guessed right!";
+    return 0;
+}
