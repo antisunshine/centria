@@ -1,0 +1,44 @@
+/***************************************************
+* Viiden arvostelutuomarin pisteet yhteenlaskettuna*
+* pisteistä vähennetään tyylipisteet ja kerrotaan  *
+* hypyn pituudella                                 *
+* Susanne Koljonen                                 *
+***************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int tuomari = 1, tulos = 0, pisteet = 0, minPisteet = 0, maxPisteet = 0, hypynPituus;
+
+    for (int i = 0; i <= 4 ; i++) {
+        cout << "Anna tuomarin " << tuomari << " pisteet:" << endl;
+        cin >> pisteet;
+        if (pisteet < minPisteet) {
+            minPisteet = pisteet;
+        }
+        if (pisteet > maxPisteet) {
+            maxPisteet = pisteet;
+        }
+        if (pisteet < 0 || pisteet > 100){
+            cout << "Tarkista pisteet" << endl;
+            i--;
+        } else {
+        tulos = tulos + pisteet;
+        tuomari++;
+        }
+    }
+
+    cout << "Pisteet yht: " << tulos << endl;
+    cout << "Anna hypyn pituus:(m)";
+    cin >> hypynPituus;
+    hypynPituus = hypynPituus /10;
+    tulos = tulos - minPisteet - maxPisteet;
+    cout << "Tyylipisteet yht: " << tulos << endl;
+    tulos = tulos + hypynPituus;
+    cout << "Lopulliset pisteet yht: " << tulos;
+
+    return 0;
+}
