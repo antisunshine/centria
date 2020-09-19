@@ -4,11 +4,16 @@
 **************************************************************/
 
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
 
 using namespace std;
 
 int main()
 {
+    (time(NULL));
+
     int x = rand()%10, guess;
 
     cout << "I am thinking of a number between 0 and 9. Guess." << endl;
