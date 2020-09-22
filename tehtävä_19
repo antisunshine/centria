@@ -1,0 +1,36 @@
+/***************************************
+* Ohjelma lukee merkkijonon, tulostaa  *
+* sen nurinperin ja tarkistaa onko sana*
+* palindromi                           *
+* Susanne Koljonen                     *
+****************************************/
+
+#include <iostream>
+#include<array>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string str = "", strRev;
+    cout << "Give a word" << endl;
+
+    cin >> str;
+    char arr[str.length()];
+
+    strcpy(arr, str.c_str());
+
+    cout << "Your word backwards is:" << endl;
+    for (int i = str.length() - 1 ; i >= 0 ; i--){
+        cout << arr[i];
+        strRev += arr[i];
+    }
+    if (strRev == str){
+        cout << "\n" << str << " Is a PALINDROME!" << endl;
+    } else {
+        cout << "\n" << str << " Is NOT a palindrome." << endl;
+    }
+
+    return 0;
+}
