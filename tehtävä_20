@@ -1,0 +1,40 @@
+/*********************************
+Ohjelma lukee arvosanat, laskee
+keskiarvon ja tulostaa jakauman
+Susanne Koljonen
+*********************************/
+#include <iostream>
+#define KOKO 10
+
+using namespace std;
+
+int main()
+{
+    int arvosana[KOKO]={0};
+    float keskiarvo = 0;
+
+    for(int i = 0; i < KOKO; i++){
+        cout << "Anna arvosana " << i + 1  << " (1-5)" << endl;
+        cin >> arvosana[i];
+        if (arvosana[i] > 5 || arvosana[i] < 0){
+            cout << "Tarkista arvosana." << endl;
+            i--;
+        } else {
+            keskiarvo = keskiarvo + arvosana[i];
+        }
+    }
+
+    cout << "Arvosanojen keskiarvo on " << keskiarvo / KOKO << endl;
+
+    for(int i = 0; i < 6; i++){
+        cout << i << ": ";
+        for(int j = 0; j < KOKO; j++){
+            if(arvosana[j] == i){
+                cout << "*";
+            }
+        }
+        cout << "\n";
+    }
+
+  return 0;
+}
