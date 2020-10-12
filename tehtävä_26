@@ -1,0 +1,30 @@
+/**********************************************************
+* Funktio, joka pyytää käyttäjältä luvun annetulta väliltä*
+* ja tarkistaa luvun kelvollisuuden. Mikäli luku ei ole   *
+* annetulla välillä, sitä pyydetään funktiossa uudelleen. *
+*Funktio palauttaa kutsujalleen käyttäjän syöttämän luvun.*
+* Susanne Koljonen                                        *
+**********************************************************/
+
+#include <iostream>
+#include <time.h>  
+
+using namespace std;
+
+int pyydaLukuValilta(int lower, int upper){
+  int num = 0;
+  cout << "Enter a number between " << lower << " and " << upper << endl;
+  cin >> num;
+    while (num < lower || num > upper){
+      cout << "Number not between limits." << endl;
+      cin >> num;
+    }
+    return num;
+}
+
+int main() {
+  
+    int luku = pyydaLukuValilta(1,10);
+
+    cout << "Your number " << luku << " is between limits.";
+}
