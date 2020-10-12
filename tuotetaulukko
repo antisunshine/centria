@@ -1,0 +1,36 @@
+/********************************
+* Ohjelma pyytää tuotevarastoon *
+* tuotenumeron ja määrän        *
+* ja toistaa niin kauan kun     *
+* käyttäjä haluaa tulostaen     *
+* viimeisenä koko tuotevaraston *
+* Susanne Koljonen              *
+********************************/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    char answer = 'Y';
+    int amount = 0, nro = 0;
+    
+    int varasto[500]={0};
+    
+    while(answer == 'Y'){
+      cout << "Anna tuotenumero: " << endl;
+      cin >> nro;
+      cout << "Anna määrä: " << endl;
+      cin >> amount;
+      varasto[nro] = amount;
+      cout << "Lisätäänkö toinen tuote? Y/N" << endl;
+      cin >> answer;
+    }
+    for(int i = 0 ; i <= 500; i++){
+      if(varasto[i] > 0)
+      cout << "Tuote nro " << i << ": " << varasto[i] << " kpl" << endl;
+    }
+    return 0;
+}
