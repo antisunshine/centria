@@ -1,0 +1,21 @@
+// Ohjelma arpoo seuraavan järjestäjän. Susanne Koljonen
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    char answer = 'Y';
+    
+    char names[8][10]={"Minna","Marko","Ari","Sanna","Topi","Halla","Naava","Paavo"};
+    
+    cout << "Arvotaan seuraava järjestäjä: " << endl;
+    while (answer == 'Y'){
+    cout << names[rand()%10] << endl;
+    cout << "Arvotaanko uudelleen? Y/N" << endl;
+    cin >> answer;
+    }
+    cout << "Hyvästi!";
+    return 0;
+}
