@@ -1,0 +1,25 @@
+/*************************************************
+* Funktio, joka palauttaa                        *
+* arvonaan kahdesta annetusta luvusta pienemmän. *
+* Luvut välitetään funktiolle parametreina.      *
+* Susanne Koljonen                               *
+************************************************/
+
+#include <iostream>
+#include <time.h>  
+
+using namespace std;
+
+int minimi(int num1, int num2){
+  if (num1 > num2){
+    return num2;
+  } else {
+    return num1;
+  }
+}
+
+int main() {
+  
+  cout << minimi(115,56);
+
+}
