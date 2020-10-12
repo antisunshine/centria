@@ -1,5 +1,6 @@
 /*************************************************
-* Ohjelma tekee funktion joka tulostaa 10 tähteä *
+* Ohjelma tekee funktion joka tulostaa halutun   *
+* määrän tähtiä.                                 *
 * Susanne Koljonen                               *
 ************************************************/
 
@@ -7,12 +8,12 @@
 
 using namespace std;
 
-void starFunction(){
-  for(int i = 0; i < 10; i++){
+void starFunction(int num){
+  for(int i = 0; i < num; i++){
     cout << "*"; 
   }
 }
 
 int main() {
-  starFunction();
+  starFunction(10);
 }
