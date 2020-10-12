@@ -1,0 +1,30 @@
+/*************************************************
+* Kirjoita funktio, joka arpoo parillisen        *
+* kokonaisluvun arvoalueelta [0,1000].           *
+* Funktiota kutsutaan seuravasti:                *
+* x = parillinen();                              *
+* Susanne Koljonen                               *
+************************************************/
+
+#include <iostream>
+#include <time.h>  
+
+using namespace std;
+
+int parillinen(){
+  int num = rand()%1000;
+  if (num % 2 == 0){
+    return num;
+  } else {
+    num++;
+    return num;
+  }
+}
+
+int main() {
+  srand (time(NULL));
+
+  int x = parillinen();
+
+  cout << x << endl;
+}
