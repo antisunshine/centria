@@ -12,11 +12,12 @@ using namespace std;
 
 int main()
 {
-    double sum = 0;
-    double days[7];
+    float sum = 0;
+    float days[7];
+    char day[7][12]={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
-    for (int i = 1 ; i <=7 ; i++) {
-        cout << "Give temp for day " << i << endl;
+    for (int i = 0 ; i <7 ; i++) {
+        cout << "Give temp for " << day[i] << ": " << endl;
         cin >> days[i];
         sum += days[i];
     }
