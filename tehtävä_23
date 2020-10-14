@@ -1,19 +1,45 @@
 /*************************************************
 * Ohjelma tekee funktion joka tulostaa halutun   *
 * määrän tähtiä.                                 *
+* Lisätty kysyy myös valinta tulostaa haluttu    *
+* määrä valittua merkkiä.                        *
 * Susanne Koljonen                               *
-************************************************/
+*************************************************/
 
 #include <iostream>
 
 using namespace std;
 
-void starFunction(int num){
-  for(int i = 0; i < num; i++){
-    cout << "*"; 
-  }
+void stars(int amount);
+void symbol(int amount, char sym);
+
+int main()
+{
+    int starAmount;
+    char symChoise;
+
+    cout << "How many stars would you like?" << endl;
+    cin >> starAmount;
+    stars(starAmount);
+    cout << "How about another symbol?" << endl;
+    cin >> symChoise;
+    cout << "How many times?" << endl;
+    cin >> starAmount;
+    symbol(starAmount, symChoise);
+
+    return 0;
 }
 
-int main() {
-  starFunction(10);
+void stars(int amount){
+    for(int i = 0; i < amount; i++){
+        cout << "*";
+    }
+    cout << "\n";
+}
+
+void symbol(int amount, char sym){
+    for(int i = 0; i < amount; i++){
+        cout << sym;
+    }
+    cout << "\n";
 }
