@@ -7,24 +7,28 @@
 ************************************************/
 
 #include <iostream>
-#include <time.h>  
+#include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
-int parillinen(){
-  int num = rand()%1000;
-  if (num % 2 == 0){
-    return num;
-  } else {
-    num++;
-    return num;
-  }
+int even();
+
+int main()
+{
+    int x = even();
+
+    cout << "Even number is " << x;
+
+    return 0;
 }
 
-int main() {
-  srand (time(NULL));
-
-  int x = parillinen();
-
-  cout << x << endl;
+int even(){
+    int num;
+    srand(time(NULL));
+    num = rand()%1001;
+    if (num % 2 != 0){
+        num++;
+    }
+    return num;
 }
