@@ -1,0 +1,55 @@
+/********************************************
+* Ohjelma tulostaa valikon, josta valitaan  *
+* viikonpäivä, jonka perusteella kertoo     *
+* sairaanhoitajan aukioloajan.              *
+* Maanantaisin verrataan viikkonumeroo ja   *
+* annetaan parillisille ja parittomille     *
+* viikoille eri aikataulu.                  *
+* Susanne Koljonen 7.11.2020                *
+********************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char vastaus;
+    int vk;
+
+    do{
+    cout << "\nValitse pv: \n m maanantai \n k keskiviikko \n p perjantai \n x muu pv \n e poistu ohjelmasta" << endl;
+    cin >> vastaus;
+
+    switch (vastaus){
+    case 'm':
+        cout << "Anna vk nro: " << endl;
+        cin >> vk;
+        if (vk%2 == 0){
+            cout << "\nAukioloajat maanantai:\nparillisina viikkoina klo 11.30 - 16.00 \nIlman ajanvarausta klo 12 - 13" << endl;
+        } else {
+            cout << "\nAukioloajat maanantai:\nparittomina viikkoina klo 8.00 - 11.30\nIlman ajanvarausta klo 8 - 9" << endl;
+        }
+        break;
+    case 'k':
+        cout << "\nAukioloajat keskiviikko:\n8 - 16\nIlman ajanvarausta klo 12 - 13" << endl;
+        break;
+    case 'p':
+        cout << "\nAukioloajat perjantai:\n8 - 14\nIlman ajanvarausta klo 12 - 13" << endl;
+        break;
+    case 'x':
+        cout << "\nAukioloajat muut:\nIlman ajanvarausta klo 12 - 13" << endl;
+        break;
+    case 'e':
+        cout << "\nPoistutaan ohjelmasta." << endl;
+        break;
+    default:
+        cout << "\nValitse uudelleen." << endl;
+        break;
+    }
+
+    }while (vastaus != 'e');
+
+
+    return 0;
+}
