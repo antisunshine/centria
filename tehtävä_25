@@ -15,12 +15,15 @@ int minimi(int num1, int num2);
 
 int main() {
 
-    int eka, toka;
+    int eka, toka, tulos;
     cout << "Give 1. number:" << endl;
     cin >> eka;
     cout << "Give 2. number:" << endl;
     cin >> toka;
-    cout << "The smoll number is : " << minimi(eka,toka);
+
+    tulos = minimi(eka,toka);
+
+    cout << "The smoll number is : " << tulos;
 
   return 0;
 }
