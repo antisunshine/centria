@@ -1,3 +1,4 @@
+
 /*************************************************
 * Funktio, joka palauttaa                        *
 * arvonaan kahdesta annetusta luvusta pienemmän. *
@@ -6,20 +7,30 @@
 ************************************************/
 
 #include <iostream>
-#include <time.h>  
+#include <time.h>
 
 using namespace std;
 
-int minimi(int num1, int num2){
-  if (num1 > num2){
-    return num2;
-  } else {
-    return num1;
-  }
-}
+int minimi(int num1, int num2);
 
 int main() {
-  
-  cout << minimi(115,56);
 
+    int eka, toka;
+    cout << "Give 1. number:" << endl;
+    cin >> eka;
+    cout << "Give 2. number:" << endl;
+    cin >> toka;
+    cout << "The smoll number is : " << minimi(eka,toka);
+
+  return 0;
+}
+
+int minimi(int num1, int num2){
+    int smoll;
+    if (num1 > num2){
+        smoll = num2;
+  } else {
+    smoll = num1;
+  }
+  return smoll;
 }
