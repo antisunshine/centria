@@ -1,14 +1,11 @@
-/********************************
-* Ohjelma pyytää tuotevarastoon *
-* tuotenumeron ja määrän        *
-* ja toistaa niin kauan kun     *
-* käyttäjä haluaa tulostaen     *
-* viimeisenä koko tuotevaraston *
-* Susanne Koljonen              *
-********************************/
+/******************************************************
+* Ohjelma pyytää tuotevarastoon tuotenumeron ja määrän*
+* ja toistaa niin kauan kun käyttäjä haluaa tulostaen *
+* viimeisenä koko tuotevaraston                       *
+* Susanne Koljonen                                    *
+******************************************************/
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -16,21 +13,29 @@ int main()
 {
     char answer = 'Y';
     int amount = 0, nro = 0;
-    
-    int varasto[500]={0};
-    
-    while(answer == 'Y'){
-      cout << "Anna tuotenumero: " << endl;
+    int varasto[501]={0};
+
+    while(answer == 'Y' || answer == 'y'){
+      cout << "Anna tuotenumero: 1 - 500 " << endl;
       cin >> nro;
-      cout << "Anna määrä: " << endl;
+      if (nro < 1 || nro > 500){
+        cout << "Tarkista tuotenumero:" << endl;
+        cin >> nro;
+      } else {
+      cout << "Anna m\x84\x84r\x84: " << endl;
       cin >> amount;
+
       varasto[nro] = amount;
-      cout << "Lisätäänkö toinen tuote? Y/N" << endl;
+
+      cout << "Lis\x84t\x84\x84nk\x94 toinen tuote? Y/N" << endl;
       cin >> answer;
+      }
     }
-    for(int i = 0 ; i <= 500; i++){
+
+    for(int i = 1 ; i <= 500; i++){
       if(varasto[i] > 0)
       cout << "Tuote nro " << i << ": " << varasto[i] << " kpl" << endl;
     }
+
     return 0;
 }
