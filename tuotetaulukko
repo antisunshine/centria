@@ -18,7 +18,11 @@ int main()
     while(answer == 'Y' || answer == 'y'){
       cout << "Anna tuotenumero: 1 - 500 " << endl;
       cin >> nro;
-      if (nro < 1 || nro > 500){
+      if(cin.fail()){
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cout << "Tarkista syöte. Syötä numero." << endl;
+      } else if (nro < 1 || nro > 500){
         cout << "Tarkista tuotenumero:" << endl;
         cin >> nro;
       } else {
